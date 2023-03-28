@@ -38,6 +38,7 @@ HTML | CSS
 > Details of my self
 > Contact avaiable
 > Animation and Transition
+> Use of modules and es6
 
 
 <!-- LIVE DEMO -->
@@ -70,7 +71,7 @@ And run `npm start` to launch the project.
 
 Clone this repository to your desired folder:
 
-  `git clone https://github.com/MussieTeka/Awesome-Books.git`
+  `git clone https://github.com/0sugo/refactored_awesomeBooks.git`
 
 ### Usage
 
@@ -123,7 +124,7 @@ If you like this project please leave a ⭐️
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 Thanks Microverse, learn how to code > [Join Microverse](https://www.microverse.org/?grsf=9m3hq6)
-Thanks to all collaborators for making this happen.
+
 
 ## 📝 License <a name="license"></a>
 

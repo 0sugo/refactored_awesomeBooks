@@ -1,15 +1,15 @@
-import Books from './books.js';
+import Books from './modules/books.js';
 
-import { DateTime } from './luxon.js';
+import { DateTime } from './modules/luxon.js';
 
 const now = DateTime.now();
 const date = now.toLocaleString(DateTime.DATETIME_FULL);
 document.getElementById('date').textContent = date;
 
-getnew => {
+const getnew = () => {
   const bookItem2 = new Books();
   bookItem2.retrieve();
-}
+};
 
 const addButton = document.getElementById('add');
 addButton.addEventListener('click', () => {

@@ -1,6 +1,7 @@
 import { showSection } from './app.js';
 
 export const store = JSON.parse(localStorage.getItem('stored')) || [];
+
 export default class Books {
   constructor(author, title) {
     this.author = author;
@@ -16,7 +17,6 @@ export default class Books {
       head,
     };
     store.push(newObj);
-
     localStorage.setItem('stored', JSON.stringify(store));
     return this;
   }
@@ -24,9 +24,7 @@ export default class Books {
   retrieve() {
     showSection.innerHTML = '';
 
-    const stored2 = JSON.parse(localStorage.getItem('stored'));
-
-    stored2.forEach((stored, index) => {
+    store.forEach((stored, index) => {
       const hostBooks = document.createElement('div');
       hostBooks.id = index;
 
@@ -44,7 +42,16 @@ export default class Books {
       remover.id = 'remover';
       remover.innerHTML = 'Remove';
       remover.addEventListener('click', () => {
-        store.splice(index, 1);
+        let currentIndex = -1;
+        for (let i = 0; i < store.length; i + 1) {
+          const { writer, head } = store[i];
+          if (writer === stored.writer && head === stored.head) {
+            currentIndex = i;
+            break;
+          }
+        }
+
+        store.splice(currentIndex, 1);
         localStorage.setItem('stored', JSON.stringify(store));
         showSection.removeChild(hostBooks);
       });

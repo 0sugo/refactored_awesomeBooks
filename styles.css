@@ -39,6 +39,8 @@ h2 {
   position: relative;
   left: 50%;
   right: 50%;
+  font-weight: 700;
+  font-size: 18px;
   box-sizing: border-box;
   transform: translate(-50%);
   -webkit-transform: translate(-50%);
@@ -167,6 +169,13 @@ margin:2%;
     text-align: center;
     font-size: 18px;
     border: 1px solid black;
-    width: 100%;
+    width: 90%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
 
 }

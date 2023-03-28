@@ -44,6 +44,7 @@ export default class Books {
       hostBooks.append(title);
 
       const remover = document.createElement('button');
+      remover.id="remover";
       remover.innerHTML = 'Remove';
       remover.addEventListener('click', () => {
         store.splice(index, 1);

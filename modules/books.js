@@ -43,7 +43,7 @@ export default class Books {
       remover.innerHTML = 'Remove';
       remover.addEventListener('click', () => {
         let currentIndex = -1;
-        for (let i = 0; i < store.length; i + 1) {
+        for (let i = 0; i < store.length; i += 1) {
           const { writer, head } = store[i];
           if (writer === stored.writer && head === stored.head) {
             currentIndex = i;

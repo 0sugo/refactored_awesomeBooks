@@ -6,7 +6,7 @@ const now = DateTime.now();
 const date = now.toLocaleString(DateTime.DATETIME_FULL);
 document.getElementById('date').textContent = date;
 
-function getnew() {
+getnew => {
   const bookItem2 = new Books();
   bookItem2.retrieve();
 }

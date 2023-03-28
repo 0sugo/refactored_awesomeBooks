@@ -6,5 +6,5 @@ addSection.appendChild(header);
 
 export const showSection = document.createElement('div');
 showSection.id = 'showsection';
-    // showSection.style.backgroundColor = "grey";
+// showSection.style.backgroundColor = "grey";
 addSection.appendChild(showSection);

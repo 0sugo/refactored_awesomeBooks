@@ -1,5 +1,6 @@
-import  {showSection} from './app.js';
-export let store = JSON.parse(localStorage.getItem('stored')) || []; 
+import { showSection } from './app.js';
+
+export const store = JSON.parse(localStorage.getItem('stored')) || [];
 export default class Books {
   constructor(author, title) {
     this.author = author;
@@ -19,10 +20,6 @@ export default class Books {
     localStorage.setItem('stored', JSON.stringify(store));
     return this;
   }
-  added(){
-    window.alert('Book has been added succesfully');
-    return this;
-  }
 
   retrieve() {
     showSection.innerHTML = '';
@@ -32,7 +29,7 @@ export default class Books {
     stored2.forEach((stored, index) => {
       const hostBooks = document.createElement('div');
       hostBooks.id = index;
- 
+
       showSection.append(hostBooks);
 
       const author = document.createElement('p');
@@ -44,7 +41,7 @@ export default class Books {
       hostBooks.append(title);
 
       const remover = document.createElement('button');
-      remover.id="remover";
+      remover.id = 'remover';
       remover.innerHTML = 'Remove';
       remover.addEventListener('click', () => {
         store.splice(index, 1);

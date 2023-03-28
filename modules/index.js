@@ -5,7 +5,7 @@ import { DateTime } from './luxon.js';
 
 const now = DateTime.now();
 const date = now.toLocaleString(DateTime.DATETIME_FULL);
-document.getElementById('date').textContent = date;
+document.getElementById('date').textContent = dat;
 
 
 function getnew (){
